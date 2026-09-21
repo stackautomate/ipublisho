@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 104" role="img" aria-labelledby="title desc">
+	<title id="title">iPublisho</title>
+	<desc id="desc">iPublisho independent publishing logo with an open book symbol</desc>
+	<g aria-hidden="true">
+		<path d="M24 37c17-17 34-17 51 0v43c-17-12-34-12-51 0V37Z" fill="#bf4da0"/>
+		<path d="M75 37c17-17 34-17 51 0v43c-17-12-34-12-51 0V37Z" fill="#4bb9bb"/>
+		<path d="M75 38v43" fill="none" stroke="#263b56" stroke-width="4" stroke-linecap="round"/>
+		<path d="M30 43c13-9 26-9 39 0M81 43c13-9 26-9 39 0" fill="none" stroke="#fffaf2" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+		<circle cx="75" cy="18" r="9" fill="#ffb523"/>
+	</g>
+	<text x="143" y="67" font-family="Fraunces, Georgia, serif" font-size="64" letter-spacing="0" font-style="normal" font-weight="600">
+		<tspan fill="#bf4da0">i</tspan><tspan fill="#4bb9bb">P</tspan><tspan fill="#ffb523">u</tspan><tspan fill="#bf4da0">b</tspan><tspan fill="#4bb9bb">l</tspan><tspan fill="#ffb523">i</tspan><tspan fill="#bf4da0">s</tspan><tspan fill="#4bb9bb">h</tspan><tspan fill="#ffb523">o</tspan>
+	</text>
+</svg>
