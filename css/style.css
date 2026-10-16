@@ -42,6 +42,7 @@
 .sales-button { min-width: 220px; min-height: 54px; justify-content: space-between; gap: 16px; padding: 15px 18px; }
 .sales-button-us { color: var(--ink); background: var(--yellow); }
 .sales-button-uk { color: var(--paper); background: var(--ink); border-color: var(--paper); }
+.amazon-cta-button { display: inline-flex; align-items: center; justify-content: center; min-width: 0; min-height: 0; gap: 0; border: 1px solid #FF9900; border-radius: 8px; padding: 12px 30px; color: #111111; background: #FF9900; font-weight: 700; text-align: center; text-decoration: none; }
 .bridge-steps { padding-top: 100px; padding-bottom: 110px; }
 .bridge-steps > h2, .journal-preview h2 { max-width: 800px; font-size: clamp(2.4rem, 4vw, 3.7rem); }
 .bridge-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 42px; }
@@ -56,6 +57,8 @@
 .mother-message-subtitle { margin: -8px 0 30px; color: var(--muted); }
 .mother-message blockquote { margin: 0; border-left: 3px solid var(--red); padding: 30px clamp(22px, 5vw, 58px); background: var(--paper); box-shadow: 0 12px 28px rgba(38,59,86,.08); }
 .mother-message blockquote p { margin: 0; color: var(--ink); font-family: var(--serif); font-size: clamp(1.15rem, 2.1vw, 1.55rem); font-style: italic; line-height: 1.65; }
+.mother-message blockquote .letter-text-block p { margin: 0 0 1.5rem; }
+.mother-message blockquote .letter-text-block .letter-quote { margin: 0 0 0 1rem; font-style: italic; }
 .mother-message cite { display: block; margin-top: 24px; color: var(--muted); font-size: 13px; font-style: normal; text-align: right; }
 .journal-features { padding-top: 96px; padding-bottom: 100px; }
 .features-subtitle { max-width: 740px; margin-bottom: 30px; color: var(--muted); font-size: 18px; }
@@ -64,6 +67,7 @@
 .features-list li strong { color: var(--ink); }
 .compliance-note { max-width: 900px; margin: 20px 0 0; color: var(--muted); font-size: 13px; }
 .compliance-note strong { color: var(--ink); }
+.features-cta { margin-top: 24px; }
 .journal-preview { padding: 88px 0 96px; background: var(--paper-deep); }
 .preview-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 34px; }
 .preview-page { min-width: 0; display: grid; place-items: center; margin: 0; padding: 14px; border: 1px solid var(--line); background: var(--paper); box-shadow: 0 10px 24px rgba(38,59,86,.1); }
