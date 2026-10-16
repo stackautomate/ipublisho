@@ -45,8 +45,8 @@
                 </div>
             </div>
             <div class="shell sales-actions sales-hero-actions" aria-label="Shop the puberty journal">
-                <a class="button sales-button sales-button-us" href="https://www.amazon.com/dp/B0HMNZ526P" target="_blank" rel="noopener noreferrer">Shop on Amazon USA <span aria-hidden="true">&#8594;</span></a>
-                <a class="button sales-button sales-button-uk" href="https://www.amazon.co.uk/dp/B0HMNZ526P" target="_blank" rel="noopener noreferrer">Shop on Amazon UK <span aria-hidden="true">&#8594;</span></a>
+                <a class="button sales-button sales-button-us amazon-cta-button" href="https://www.amazon.com/dp/B0HMNZ526P" target="_blank" rel="noopener noreferrer">Shop on Amazon USA <span aria-hidden="true">&#8594;</span></a>
+                <a class="button sales-button sales-button-uk amazon-cta-button" href="https://www.amazon.co.uk/dp/B0HMNZ526P" target="_blank" rel="noopener noreferrer">Shop on Amazon UK <span aria-hidden="true">&#8594;</span></a>
             </div>
         </section>
 
@@ -98,7 +98,7 @@
 
 </div>
 
-                    <cite>— 'Why Author Wrote This Book'</cite>
+                    <cite>— A Message from the Creators at iPublisho Media</cite>
                 </blockquote>
             </div>
         </section>
@@ -114,6 +114,9 @@
                 <li><strong>A Timeless Treasure:</strong> Generous spaces designed to capture beautiful moments forever, creating a deeply private family treasure to pass down for generations.</li>
             </ul>
             <p class="compliance-note"><strong>Safety Note:</strong> No medical advice. Just real, honest, and loving conversations between the women who know best and the girls who need them most.</p>
+            <div class="sales-actions features-cta" aria-label="Shop the puberty journal">
+                <a class="button sales-button sales-button-us amazon-cta-button" href="https://www.amazon.com/dp/B0HMNZ526P" target="_blank" rel="noopener noreferrer">Shop on Amazon <span aria-hidden="true">&#8594;</span></a>
+            </div>
         </section>
 
         <!-- Responsive interior-page gallery. -->
@@ -146,8 +149,8 @@
                 <h2 id="sales-close-title">Ready to Share Your Puberty Journey with Your Little One?</h2>
                 <p>Give her a guide she will cherish forever.</p>
                 <div class="sales-actions sales-close-actions" aria-label="Shop the puberty journal">
-                    <a class="button sales-button sales-button-us" href="https://www.amazon.com/dp/B0HMNZ526P" target="_blank" rel="noopener noreferrer">Shop on Amazon USA <span aria-hidden="true">&#8594;</span></a>
-                    <a class="button sales-button sales-button-uk" href="https://www.amazon.co.uk/dp/B0HMNZ526P" target="_blank" rel="noopener noreferrer">Shop on Amazon UK <span aria-hidden="true">&#8594;</span></a>
+                    <a class="button sales-button sales-button-us amazon-cta-button" href="https://www.amazon.com/dp/B0HMNZ526P" target="_blank" rel="noopener noreferrer">Shop on Amazon USA <span aria-hidden="true">&#8594;</span></a>
+                    <a class="button sales-button sales-button-uk amazon-cta-button" href="https://www.amazon.co.uk/dp/B0HMNZ526P" target="_blank" rel="noopener noreferrer">Shop on Amazon UK <span aria-hidden="true">&#8594;</span></a>
                 </div>
             </div>
         </section>
@@ -155,5 +158,57 @@
 
     <div data-site-footer></div>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const bookId = 'B0HMNZ526P';
+            let amazonDomain = 'amazon.com';
+
+            try {
+                const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+                const locale = (navigator.language || navigator.userLanguage || "").toLowerCase();
+
+                if (tz.includes("London") || tz.includes("Europe/London") || locale.includes("-gb") || locale.includes("-uk")) {
+                    amazonDomain = 'amazon.co.uk';
+                } else if (tz.includes("Berlin") || tz.includes("Europe/Berlin") || locale.includes("-de")) {
+                    amazonDomain = 'amazon.de';
+                } else if (tz.includes("Paris") || tz.includes("Europe/Paris") || locale.includes("-fr")) {
+                    amazonDomain = 'amazon.fr';
+                } else if (tz.includes("Madrid") || tz.includes("Europe/Madrid") || locale.includes("-es")) {
+                    amazonDomain = 'amazon.es';
+                } else if (tz.includes("Rome") || tz.includes("Europe/Rome") || locale.includes("-it")) {
+                    amazonDomain = 'amazon.it';
+                } else if (tz.includes("Amsterdam") || tz.includes("Europe/Amsterdam") || locale.includes("-nl")) {
+                    amazonDomain = 'amazon.nl';
+                } else if (tz.includes("Warsaw") || tz.includes("Europe/Warsaw") || locale.includes("-pl")) {
+                    amazonDomain = 'amazon.pl';
+                } else if (tz.includes("Stockholm") || tz.includes("Europe/Stockholm") || locale.includes("-se")) {
+                    amazonDomain = 'amazon.se';
+                } else if (tz.includes("Brussels") || tz.includes("Europe/Brussels") || locale.includes("-be")) {
+                    amazonDomain = 'amazon.com.be';
+                } else if (tz.includes("Dublin") || tz.includes("Europe/Dublin") || locale.includes("-ie")) {
+                    amazonDomain = 'amazon.co.uk';
+                } else if (tz.includes("Tokyo") || tz.includes("Asia/Tokyo") || locale.includes("-jp")) {
+                    amazonDomain = 'amazon.co.jp';
+                } else if (tz.includes("Toronto") || tz.includes("America/Toronto") || tz.includes("America/Vancouver") || locale.includes("-ca")) {
+                    amazonDomain = 'amazon.ca';
+                } else if (tz.includes("Sydney") || tz.includes("Australia") || locale.includes("-au")) {
+                    amazonDomain = 'amazon.com.au';
+                }
+            } catch (error) {
+                console.log("Geo-routing fallback activated:", error);
+            }
+
+            const targetUrl = `https://${amazonDomain}/dp/${bookId}`;
+            const ctaButtons = document.querySelectorAll('.amazon-cta-button');
+
+            ctaButtons.forEach(button => {
+                button.href = targetUrl;
+                if (button.textContent.includes("Shop on Amazon") || button.textContent.includes("Order on Amazon") || button.textContent.includes("View on Amazon")) {
+                    const label = [...button.childNodes].find(node => node.nodeType === Node.TEXT_NODE);
+                    if (label) label.nodeValue = "View on Amazon ";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
