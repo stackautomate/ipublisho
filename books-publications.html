@@ -31,42 +31,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
         <div class="shell sales-actions sales-hero-actions" aria-label="Shop the puberty journal">
-            <a class="amazon-cta-button" href="https://www.amazon.com/dp/9798176948257" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+            <a class="amazon-cta-button" href="https://www.amazon.com/dp/B0HMNZ526P" target="_blank" rel="noopener noreferrer">View on Amazon</a>
         </div>
     </section>
  </main><div data-site-footer></div>
             <script src="js/main.js"></script>
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    const bookId = '9798176948257';
-                    let amazonDomain = 'amazon.com';
-                    try {
-                        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
-                        const locale = (navigator.language || navigator.userLanguage || "").toLowerCase();
-                        if (tz.includes("London") || tz.includes("Europe/London") || locale.includes("-gb") || locale.includes("-uk")) { amazonDomain = 'amazon.co.uk'; }
-                        else if (tz.includes("Berlin") || locale.includes("-de")) { amazonDomain = 'amazon.de'; }
-                        else if (tz.includes("Paris") || locale.includes("-fr")) { amazonDomain = 'amazon.fr'; }
-                        else if (tz.includes("Madrid") || locale.includes("-es")) { amazonDomain = 'amazon.es'; }
-                        else if (tz.includes("Rome") || locale.includes("-it")) { amazonDomain = 'amazon.it'; }
-                        else if (tz.includes("Amsterdam") || locale.includes("-nl")) { amazonDomain = 'amazon.nl'; }
-                        else if (tz.includes("Warsaw") || locale.includes("-pl")) { amazonDomain = 'amazon.pl'; }
-                        else if (tz.includes("Stockholm") || locale.includes("-se")) { amazonDomain = 'amazon.se'; }
-                        else if (tz.includes("Brussels") || locale.includes("-be")) { amazonDomain = 'amazon.com.be'; }
-                        else if (tz.includes("Dublin") || locale.includes("-ie")) { amazonDomain = 'amazon.co.uk'; }
-                        else if (tz.includes("Tokyo") || locale.includes("-jp")) { amazonDomain = 'amazon.co.jp'; }
-                        else if (tz.includes("Toronto") || locale.includes("-ca")) { amazonDomain = 'amazon.ca'; }
-                        else if (tz.includes("Sydney") || locale.includes("-au")) { amazonDomain = 'amazon.com.au'; }
-                    } catch (error) {
-                        console.log("Routing diagnostic log:", error);
-                    }
-                    const targetUrl = `https://${amazonDomain}/dp/${bookId}`;
-                    const ctaButtons = document.querySelectorAll('.amazon-cta-button, a[href*="amazon.com"]');
-                    ctaButtons.forEach(button => {
-                        button.href = targetUrl;
-                        if (button.innerText.trim() === "") button.innerText = "View on Amazon";
-                    });
-                });
-            </script>
         </body>
         </html>
 
