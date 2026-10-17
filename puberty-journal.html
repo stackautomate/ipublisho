@@ -36,10 +36,8 @@
                     <p class="eyebrow">A shared journal for growing up</p>
                     <h1>Puberty Journal for Teen Girls: <em>Share Your Growing Up Story</em></h1>
                     <p class="sales-hero-subtitle">100 Heartfelt Prompts to Share Memories, Talk About Body Changes, and Build Confidence</p>
-                    <p class="sales-hero-intro"><p style="margin-bottom: 1rem;">Growing up can feel very lonely. As a young girl watches her body change, she faces confusion and big emotional shifts. She has so many deep questions inside, but she doesn't know how to ask them.</p>
-
-<p style="margin-bottom: 1.5rem;">This journal gives her a safe way to ask those questions. By handing it to the mentors she trusts more than anyone else—like her mother, grandmother, or aunt—she can collect their real stories, taking away her fear and building a lasting confidence.</p>
-</p>
+                    <p class="sales-hero-intro">Growing up can feel very lonely. As a young girl watches her body change, she faces confusion and big emotional shifts. She has so many deep questions inside, but she doesn't know how to ask them.</p>
+                    <p class="sales-hero-intro">This journal gives her a safe way to ask those questions. By handing it to the mentors she trusts more than anyone else—like her mother, grandmother, or aunt—she can collect their real stories, easing fear and building lasting confidence.</p>
                 </div>
                 <div class="sales-hero-product">
                     <div class="sales-book-art">
@@ -48,7 +46,7 @@
                 </div>
             </div>
             <div class="shell sales-actions sales-hero-actions" aria-label="Shop the puberty journal">
-                <a class="button sales-button amazon-cta-button" href="https://www.amazon.com/dp/B0HMNZ526P" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+                <a class="amazon-cta-button" href="https://www.amazon.com/dp/9798176948257" target="_blank" rel="noopener noreferrer">View on Amazon</a>
             </div>
         </section>
 
@@ -113,7 +111,7 @@
             </ul>
             <p class="compliance-note"><strong>Safety Note:</strong> No medical advice. Just real, honest, and loving conversations between the women who know best and the girls who need them most.</p>
             <div class="sales-actions features-cta" aria-label="Shop the puberty journal">
-                <a class="button sales-button amazon-cta-button" href="https://www.amazon.com/dp/B0HMNZ526P" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+                <a class="amazon-cta-button" href="https://www.amazon.com/dp/9798176948257" target="_blank" rel="noopener noreferrer">View on Amazon</a>
             </div>
         </section>
 
@@ -147,7 +145,7 @@
                 <h2 id="sales-close-title">Ready to Share Your Puberty Journey with Loved One?</h2>
                 <p>Give her a guide she will cherish forever.</p>
                 <div class="sales-actions sales-close-actions" aria-label="Shop the puberty journal">
-                    <a class="button sales-button amazon-cta-button" href="https://www.amazon.com/dp/B0HMNZ526P" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+                    <a class="amazon-cta-button" href="https://www.amazon.com/dp/9798176948257" target="_blank" rel="noopener noreferrer">View on Amazon</a>
                 </div>
             </div>
         </section>
@@ -157,7 +155,7 @@
     <script src="js/main.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const bookId = 'B0HMNZ526P';
+            const bookId = '9798176948257';
             let amazonDomain = 'amazon.com';
 
             try {
@@ -196,7 +194,7 @@
             }
 
             const targetUrl = `https://${amazonDomain}/dp/${bookId}`;
-            const ctaButtons = document.querySelectorAll('.amazon-cta-button');
+            const ctaButtons = document.querySelectorAll('.amazon-cta-button, a[href*="amazon.com"]');
 
             ctaButtons.forEach(button => {
                 button.href = targetUrl;

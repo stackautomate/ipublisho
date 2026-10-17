@@ -42,7 +42,13 @@
 .sales-button { min-width: 220px; min-height: 54px; justify-content: space-between; gap: 16px; padding: 15px 18px; }
 .sales-button-us { color: var(--ink); background: var(--yellow); }
 .sales-button-uk { color: var(--paper); background: var(--ink); border-color: var(--paper); }
-.amazon-cta-button { display: inline-flex; align-items: center; justify-content: center; min-width: 0; min-height: 0; gap: 0; border: 1px solid #FF9900; border-radius: 8px; padding: 12px 30px; color: #111111; background: #FF9900; font-weight: 700; text-align: center; text-decoration: none; }
+.amazon-cta-button { display: inline-flex; align-items: center; justify-content: center; min-height: 54px; gap: 0; border: 1px solid #FF9900; border-radius: 8px; padding: 12px 30px; color: #111111; background: #FF9900; font: inherit; font-weight: 700; text-align: center; text-decoration: none; transition: background-color .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+.amazon-cta-button:link, .amazon-cta-button:visited, .amazon-cta-button:hover, .amazon-cta-button:focus { color: #111111; text-decoration: none; }
+.amazon-cta-button:hover { border-color: #E88900; background: #E88900; transform: translateY(-2px); box-shadow: 0 4px 0 rgba(17,17,17,.2); }
+.amazon-cta-button:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.product-checklist { margin: 25px 0 0; padding-left: 22px; color: var(--muted); }
+.product-checklist li { padding-left: 5px; line-height: 1.6; }
+.product-checklist li + li { margin-top: 9px; }
 .bridge-steps { padding-top: 100px; padding-bottom: 110px; }
 .bridge-steps > h2, .journal-preview h2 { max-width: 800px; font-size: clamp(2.4rem, 4vw, 3.7rem); }
 .bridge-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 42px; }
